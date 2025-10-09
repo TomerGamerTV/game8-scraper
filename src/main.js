@@ -16,12 +16,11 @@ import { router } from './routes.js';
 // Initialize the Apify SDK
 await Actor.init();
 
-const { startUrls = ['https://apify.com'] } = (await Actor.getInput()) ?? {};
+const { query = 'monster hunter' } = (await Actor.getInput()) ?? {};
 
-const proxyConfiguration = await Actor.createProxyConfiguration();
+const startUrls = [`https://game8.co/search?cx=b7c4d19dfceb64d24&ie=UTF-8&query=${encodeURIComponent(query)}`];
 
 const crawler = new PlaywrightCrawler({
-    proxyConfiguration,
     requestHandler: router,
     launchContext: {
         launchOptions: {
