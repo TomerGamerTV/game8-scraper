@@ -1,0 +1,2 @@
+[32mINFO[39m  System info[90m {"apifyVersion":"3.5.0","apifyClientVersion":"2.17.0","crawleeVersion":"3.15.1","osType":"Linux","nodeVersion":"v22.17.1"}[39m
+[33mWARN[39m [33m ProxyConfiguration:[39m No proxy password or token detected, running without proxy. To use Apify Proxy locally, provide options.password or "APIFY_PROXY_PASSWORD" environment variable. You can also provide your Apify token via the "APIFY_TOKEN" environment variable, so that the SDK can fetch the proxy password from Apify API, when APIFY_PROXY_PASSWORD is not defined
